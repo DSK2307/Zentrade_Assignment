@@ -8,7 +8,7 @@
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://dsk2307-zentrade-assignment-dashboard-0aq89d.streamlit.app/)
 [![n8n Integration](https://img.shields.io/badge/n8n-Workflow-EA4B71?logo=n8n&logoColor=white)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 [Live Dashboard Demo](https://dsk2307-zentrade-assignment-dashboard-0aq89d.streamlit.app/) • [Watch Demo Video](https://www.youtube.com/watch?v=UIsep4a4iHo)
 
@@ -250,3 +250,4 @@ mkdir -p outputs/accounts
 <div align="center">
   <p>Built with ❤️ for the <b>Clara Answers</b> intern assignment.</p>
 </div>
+

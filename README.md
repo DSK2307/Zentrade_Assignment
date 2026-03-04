@@ -8,6 +8,8 @@ A zero-cost, locally reproducible automation pipeline that converts customer cal
 
 *Click the image above to watch the 4-minute full video walkthrough, demonstrating the CLI pipeline, n8n orchestration, and the Streamlit UI dashboard.*
 
+**🌐 Live Dashboard Demo:** [Try the interactive UI here!](https://dsk2307-zentrade-assignment-dashboard-0aq89d.streamlit.app/)
+
 ---
 
 ## 📂 Dataset Injection

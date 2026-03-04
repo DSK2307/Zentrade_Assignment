@@ -311,7 +311,7 @@ if tab_choice == "📊 Dashboard":
                         
                         changelog = ACCOUNTS_DIR / a["id"] / "v2" / "changes.md"
                         if changelog.exists():
-                            st.download_button("⬇️ Download changes.md", data=changelog.read_text('utf-8'), file_name="changes.md")
+                            st.download_button("⬇️ Download changes.md", data=changelog.read_text('utf-8'), file_name=f"{a['id']}_changes.md", key=f"dl_{a['id']}")
                             
                         st.markdown("---")
                         st.caption("Raw JSON Data")

@@ -122,6 +122,15 @@ To process your own calls:
 1.  Drop raw `.txt` transcript files into `dataset/demo_calls/` (for Pipeline A) or `dataset/onboarding_calls/` (for Pipeline B).
 2.  Run the batch processor or trigger the pipeline via CLI/n8n pointing to your new file paths. The system will automatically generate safe `account_id` slugs based on extracted company names.
 
+### Cleaning Outputs (Reset for New Data)
+If you want to clear all previously generated memos, agent specs, and changelogs to start fresh with a new dataset, you can run the following PowerShell commands:
+```powershell
+# Clears all generated account folders and the batch summary report
+Remove-Item -Recurse -Force outputs\accounts
+Remove-Item -Force outputs\summary_report.json
+New-Item -ItemType Directory -Force -Path "outputs\accounts"
+```
+
 ---
 
 ## 💾 Output Storage

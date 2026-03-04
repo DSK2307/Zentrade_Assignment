@@ -31,23 +31,30 @@ New-Item -ItemType Directory -Force -Path "outputs\accounts"
 
 The system processes raw transcripts through a two-phase pipeline using a robust rule-based extraction engine with an optional local LLM fallback. This ensures deterministic outputs while completely avoiding mandatory paid API dependencies.
 
-```text
-[ Raw Transcript (.txt) ]
-       │
-       ▼
-[ Normalization Layer ] ── Removes fillers, normalizes times/days
-       │
-       ▼
-[ Extraction Engine ] ───── Regex/Heuristic rules (fallback: Local Ollama)
-       │
-       ▼
-[ Account Memo JSON ] ───── Structured intermediate representation
-       │
-       ▼
-[ Patch/Merge Engine ] ──── (Pipeline B only) Field-level diffing & deep merge
-       │
-       ▼
-[ Prompt Generator ] ────── Assembles Retell Agent Spec (v1 or v2)
+```mermaid
+graph TD
+    classDef default fill:#1a1f2e,stroke:#388bfd,stroke-width:2px,color:#cdd9e5,rx:8px,ry:8px
+    classDef output fill:#0d2119,stroke:#3fb950,stroke-width:2px,color:#cdd9e5,rx:8px,ry:8px
+    classDef input fill:#1c1700,stroke:#d29922,stroke-width:2px,color:#cdd9e5,rx:8px,ry:8px
+
+    A[Raw Transcript .txt] -->|Ingestion| B(Normalization Layer)
+    class A input
+    
+    B -->|Removes fillers, normalizes times| C{Extraction Engine}
+    C -->|Regex / Heuristic Rules| D[Account Memo JSON]
+    C -.->|Fallback| LLM[Local Ollama LLM]
+    LLM -.-> D
+    
+    D --> E{Patch / Merge Engine}
+    
+    E -->|Pipeline B Only| F[Field-level diffing]
+    F --> D
+    
+    E -->|Assembles Config| G[Prompt Generator]
+    
+    G --> H[Retell Agent Spec JSON]
+    
+    class D,H output
 ```
 
 ### Pipelines

@@ -1,0 +1,46 @@
+DEMO CALL TRANSCRIPT – Apex Plumbing Services
+Date: 2026-02-16
+Duration: 6 minutes
+Participants: Sales Rep (Clara), Client Contact (Maria Santos)
+
+---
+
+Clara: Hello, this is Clara. Am I speaking with Maria at Apex Plumbing?
+
+Maria: Yes, this is Maria Santos, Customer Experience Lead at Apex Plumbing Services LLC.
+
+Clara: Wonderful. Let me get some details from you. What are your business hours?
+
+Maria: We're open Monday to Friday, 7am to 6pm, Central Time.
+
+Clara: And your office address?
+
+Maria: 220 West Adams Street, Suite 400, Chicago, Illinois 60606.
+
+Clara: What services does Apex Plumbing offer?
+
+Maria: Residential and commercial plumbing repair, water heater installation, drain cleaning, pipe inspection, leak detection, and emergency plumbing services.
+
+Clara: What counts as an emergency in your business?
+
+Maria: A burst pipe, water main break, gas line leak, severe sewage backup, or a complete loss of water in a building. Those all go to emergency immediately.
+
+Clara: How should the agent route emergency calls?
+
+Maria: Transfer directly to our emergency line at 312-555-0177. If that fails, transfer to the mobile dispatcher at 312-555-0188. If both fail, assure them a plumber will call back within 30 minutes and log the details.
+
+Clara: For non-emergency calls?
+
+Maria: Collect their name, address, issue description, and preferred callback time. We'll schedule them within two business days.
+
+Clara: Any CRM or tools we should integrate with?
+
+Maria: We use HubSpot for customer management. All call summaries should ideally sync there.
+
+Clara: Any special instructions for the agent?
+
+Maria: The agent should always let callers know if there's estimated wait time for emergencies. And it should never quote prices.
+
+Clara: Noted. Thank you Maria.
+
+Maria: Thank you!

@@ -1,0 +1,295 @@
+{
+    "name": "Clara Agent Pipeline (HTTP)",
+    "nodes": [
+        {
+            "parameters": {},
+            "id": "trigger-pipeline-a",
+            "name": "Pipeline A – Manual Trigger",
+            "type": "n8n-nodes-base.manualTrigger",
+            "typeVersion": 1,
+            "position": [
+                100,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://127.0.0.1:8765/pipeline-a",
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "{\n  \"transcript\": \"dataset/demo_calls/demo_transcript_001.txt\",\n  \"account_id\": \"abc_fire_protection\",\n  \"output_dir\": \"outputs/accounts/abc_fire_protection/v1\",\n  \"force\": true\n}",
+                "options": {}
+            },
+            "id": "run-pipeline-a",
+            "name": "Run Full Pipeline A",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+                350,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "conditions": {
+                    "options": {
+                        "caseSensitive": true
+                    },
+                    "conditions": [
+                        {
+                            "id": "check-status-a",
+                            "leftValue": "={{ $json.status }}",
+                            "rightValue": "ok",
+                            "operator": {
+                                "type": "string",
+                                "operation": "equals"
+                            }
+                        }
+                    ]
+                }
+            },
+            "id": "check-a",
+            "name": "Pipeline A Succeeded?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 2,
+            "position": [
+                600,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "assignments": {
+                    "assignments": [
+                        {
+                            "id": "success-a",
+                            "name": "message",
+                            "value": "=Pipeline A complete ✅ | memo: {{ $('Run Full Pipeline A').item.json.memo_path }} | agent_spec: {{ $('Run Full Pipeline A').item.json.agent_spec_path }}",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "id": "success-a",
+            "name": "Pipeline A: Success",
+            "type": "n8n-nodes-base.set",
+            "typeVersion": 3,
+            "position": [
+                850,
+                100
+            ]
+        },
+        {
+            "parameters": {
+                "assignments": {
+                    "assignments": [
+                        {
+                            "id": "error-a",
+                            "name": "message",
+                            "value": "=Pipeline A FAILED ❌ | error: {{ $('Run Full Pipeline A').item.json }}",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "id": "error-a",
+            "name": "Pipeline A: Error",
+            "type": "n8n-nodes-base.set",
+            "typeVersion": 3,
+            "position": [
+                850,
+                300
+            ]
+        },
+        {
+            "parameters": {},
+            "id": "trigger-pipeline-b",
+            "name": "Pipeline B – Manual Trigger",
+            "type": "n8n-nodes-base.manualTrigger",
+            "typeVersion": 1,
+            "position": [
+                100,
+                600
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://127.0.0.1:8765/pipeline-b",
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "{\n  \"onboarding\": \"dataset/onboarding_calls/onboarding_001.txt\",\n  \"v1_memo\": \"outputs/accounts/abc_fire_protection/v1/memo.json\",\n  \"v2_output_dir\": \"outputs/accounts/abc_fire_protection/v2\",\n  \"force\": true\n}",
+                "options": {}
+            },
+            "id": "run-pipeline-b",
+            "name": "Run Full Pipeline B",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+                350,
+                600
+            ]
+        },
+        {
+            "parameters": {
+                "conditions": {
+                    "options": {
+                        "caseSensitive": true
+                    },
+                    "conditions": [
+                        {
+                            "id": "check-status-b",
+                            "leftValue": "={{ $json.status }}",
+                            "rightValue": "ok",
+                            "operator": {
+                                "type": "string",
+                                "operation": "equals"
+                            }
+                        }
+                    ]
+                }
+            },
+            "id": "check-b",
+            "name": "Pipeline B Succeeded?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 2,
+            "position": [
+                600,
+                600
+            ]
+        },
+        {
+            "parameters": {
+                "assignments": {
+                    "assignments": [
+                        {
+                            "id": "success-b",
+                            "name": "message",
+                            "value": "=Pipeline B complete ✅ | v2_memo: {{ $('Run Full Pipeline B').item.json.v2_memo_path }} | changelog: {{ $('Run Full Pipeline B').item.json.changelog_path }}",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "id": "success-b",
+            "name": "Pipeline B: Success",
+            "type": "n8n-nodes-base.set",
+            "typeVersion": 3,
+            "position": [
+                850,
+                500
+            ]
+        },
+        {
+            "parameters": {
+                "assignments": {
+                    "assignments": [
+                        {
+                            "id": "error-b",
+                            "name": "message",
+                            "value": "=Pipeline B FAILED ❌ | error: {{ $('Run Full Pipeline B').item.json }}",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "id": "error-b",
+            "name": "Pipeline B: Error",
+            "type": "n8n-nodes-base.set",
+            "typeVersion": 3,
+            "position": [
+                850,
+                700
+            ]
+        }
+    ],
+    "connections": {
+        "Pipeline A – Manual Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Run Full Pipeline A",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Run Full Pipeline A": {
+            "main": [
+                [
+                    {
+                        "node": "Pipeline A Succeeded?",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Pipeline A Succeeded?": {
+            "main": [
+                [
+                    {
+                        "node": "Pipeline A: Success",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "Pipeline A: Error",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Pipeline B – Manual Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Run Full Pipeline B",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Run Full Pipeline B": {
+            "main": [
+                [
+                    {
+                        "node": "Pipeline B Succeeded?",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Pipeline B Succeeded?": {
+            "main": [
+                [
+                    {
+                        "node": "Pipeline B: Success",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "Pipeline B: Error",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "meta": {
+        "description": "Clara Agent Pipeline – n8n HTTP Request workflow (requires pipeline_server.py running on port 8765)"
+    }
+}

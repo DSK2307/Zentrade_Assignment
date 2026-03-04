@@ -1,0 +1,59 @@
+DEMO CALL TRANSCRIPT – Ben's Electric Solutions
+Date: 2026-03-04
+Duration: 7 minutes
+Type: Initial Demo / Onboarding Discovery Call
+Participants: Clara AI Onboarding Specialist, Ben Harper (Owner, Ben's Electric Solutions)
+
+---
+
+Clara: Hi, is this Ben from Ben's Electric Solutions?
+
+Ben: Yes, speaking. Ben Harper here.
+
+Clara: Hi Ben, I'm calling from the Clara AI team for your onboarding session. Is now a good time?
+
+Ben: Absolutely, go for it.
+
+Clara: Great. Let me confirm a few things for your agent setup. Can you confirm the full business name and email?
+
+Ben: Ben's Electric Solutions Team. And the email is info@benselectricsolutionsteam.com.
+
+Clara: Perfect. What are your business hours?
+
+Ben: We're open Monday to Friday, 7:30am to 5pm. Mountain Standard Time, we're in Alberta.
+
+Clara: And your office address?
+
+Ben: 215 Manning Road Northeast, Calgary, Alberta. Postal code T2E 7M7.
+
+Clara: What services do you offer?
+
+Ben: Residential and commercial electrical work. Panel upgrades, wiring, EV charger installs, generator hookups, pot lights, smart home wiring, safety inspections and electrical permits.
+
+Clara: What would you classify as an emergency in your business?
+
+Ben: Any live wire exposed, electrical fire or smoke from a panel or outlet, complete power outage affecting someone's home or business, a failed electrical panel, or a sparking fixture. Those are all get-there-asap situations.
+
+Clara: How should emergency calls be handled after hours?
+
+Ben: Call me on my cell: 587-222-0194. If I'm unavailable, my lead tech Marcus is at 587-222-0201. If neither of us picks up, tell the customer to call 911 if there's any immediate danger, then leave their name, address, and the issue and I'll call back within 30 minutes.
+
+Clara: For non-emergency after-hours calls?
+
+Ben: Collect their name, number, address, and what kind of work they need. We'll follow up first thing next business morning and book a site visit if needed.
+
+Clara: Do you use CRM software?
+
+Ben: We just started using Jobber for scheduling and invoicing. It's pretty new for us.
+
+Clara: Good to note. Anything the agent should never do?
+
+Ben: Never quote a price on the phone. And never promise next-day service for permit work — that takes planning.
+
+Clara: Noted. Anything else, Ben?
+
+Ben: Yeah — make sure the agent sounds friendly but professional. We deal with a lot of homeowners who are stressed when their power's out. The agent should be calm and reassuring.
+
+Clara: Absolutely. We'll build that into the personality. Thanks Ben, this was great.
+
+Ben: Cheers, looking forward to it.

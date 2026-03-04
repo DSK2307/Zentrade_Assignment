@@ -1,0 +1,44 @@
+DEMO CALL TRANSCRIPT – Guardian Alarm Systems
+Date: 2026-02-18
+Duration: 4 minutes
+Participants: Sales Rep (Clara), Client Contact (Priya Nair)
+
+---
+
+Clara: Hi Priya, thanks for joining. This is Clara.
+
+Priya: Hi Clara. Priya Nair, Operations at Guardian Alarm Systems.
+
+Clara: What are your business hours?
+
+Priya: Monday to Friday, 9am to 5pm. Mountain Standard Time.
+
+Clara: Office address?
+
+Priya: 3300 East Camelback Road, Phoenix, Arizona 85018.
+
+Clara: What services do you provide?
+
+Priya: Alarm system installation, alarm monitoring, alarm maintenance and testing, and emergency alarm response coordination.
+
+Clara: What counts as an emergency?
+
+Priya: Any fire alarm activation, carbon monoxide alarm, or intrusion alarm during non-business hours. Also water leak detected by sensors.
+
+Clara: How should the agent route emergency calls?
+
+Priya: Call our monitoring center at 602-555-0110. If unreachable, call the regional supervisor at 602-555-0122.
+
+Clara: Non-emergency?
+
+Priya: Leave a detailed voicemail with callback number and issue description. Someone will call back within 4 business hours.
+
+Clara: Any software integrations?
+
+Priya: We use Zendesk for support ticketing. The agent should mention that a ticket will be created.
+
+Clara: Anything else to know?
+
+Priya: The agent should always verify that the caller is an account holder before routing sensitive calls.
+
+Clara: Noted. Thank you Priya!

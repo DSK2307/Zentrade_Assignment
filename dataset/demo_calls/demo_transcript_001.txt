@@ -1,0 +1,50 @@
+DEMO CALL TRANSCRIPT – ABC Fire Protection
+Date: 2026-02-15
+Duration: 8 minutes
+Participants: Sales Rep (Clara), Client Contact (John Mercer)
+
+---
+
+Clara: Hello, thank you for joining us today. This is Clara from the AI onboarding team. Am I speaking with John from ABC Fire Protection?
+
+John: Yes, that's right. John Mercer here, Operations Manager at ABC Fire Protection Incorporated.
+
+Clara: Great to meet you, John. So um, let me just start by um confirming some basic details about your business. Can you tell me your standard office hours?
+
+John: Sure. We're open Monday through Friday, 8am to 5pm Pacific Standard Time. No weekends.
+
+Clara: Perfect. And your office address?
+
+John: We're located at 4821 Oak Street, Sacramento, California 95814.
+
+Clara: Great. Now, you know, what services does ABC Fire Protection provide?
+
+John: We handle fire sprinkler systems, fire alarm installation and testing, fire extinguisher maintenance, inspection services, and emergency suppression repair. Basically the full range.
+
+Clara: Excellent. Can you describe what you consider an emergency for your business?
+
+John: So for us an emergency is any sprinkler leak, fire alarm activation, fire alarm triggered, water leak on a protected property, or any fire suppression failure. Those need an immediate response.
+
+Clara: And how should our AI agent handle emergency calls when they come in?
+
+John: For an emergency, the agent should immediately route to our dispatch center. The dispatch number is 916-555-0192. If dispatch doesn't pick up, the agent should try the on-call technician at 916-555-0199. If that also fails, the agent should assure the caller that a technician will be on-site within the hour and log the call details.
+
+Clara: Got it. And for non-emergency calls? Like routine service requests?
+
+John: Those can be scheduled. The agent should collect the caller's name, phone number, and the service address, then let them know our team will call back within one business day to schedule the appointment.
+
+Clara: Do you use any specific software or CRM we should be aware of?
+
+John: Yes, we use ServiceTitan for all our service scheduling and dispatch management.
+
+Clara: Is there anything else important for our AI agent to know?
+
+John: Just make sure it never promises a specific technician or a hard dollar amount. Those decisions are made by our service managers.
+
+Clara: Absolutely. That's noted. Is there anything else?
+
+John: Not for now, I think that covers everything.
+
+Clara: Perfect John, thank you so much. We'll get the agent configured and send you a preview within 48 hours.
+
+John: Sounds great. Appreciate it.

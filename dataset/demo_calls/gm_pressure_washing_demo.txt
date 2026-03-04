@@ -1,0 +1,63 @@
+DEMO CALL TRANSCRIPT – G&M Pressure Washing
+Date: 2026-03-04
+Duration: 9 minutes
+Type: Initial Demo / Onboarding Discovery Call
+Participants: Clara AI Onboarding Specialist, Shelley Manley (Owner, G&M Pressure Washing)
+
+---
+
+Clara: Hi, good morning. Am I speaking with Shelley at G&M Pressure Washing?
+
+Shelley: Yes, this is Shelley Manley. Thanks for calling, I've been looking forward to this.
+
+Clara: Wonderful. So Shelley, let's start with the basics. Can you confirm the full business name for our records?
+
+Shelley: Sure. It's G&M Pressure Washing. We're a small family-run operation based out of Calgary.
+
+Clara: Perfect. And what's your main business phone number?
+
+Shelley: That's 403-870-8494. That's my direct line, customers can always reach me there.
+
+Clara: Great. And if someone needed to email your team?
+
+Shelley: Yes, our email is gm_pressurewash@yahoo.ca.
+
+Clara: Got it. Now, what are your normal business hours, Shelley?
+
+Shelley: We're available Monday through Friday, 8am to 5pm Mountain Time. Saturdays we sometimes take bookings but it's not guaranteed.
+
+Clara: Good to know. And your office or base address?
+
+Shelley: We operate out of 742 Evergreen Street, Calgary, Alberta, T2Y 3C1.
+
+Clara: What services does G&M Pressure Washing provide?
+
+Shelley: We do residential and commercial pressure washing, roof cleaning, gutter cleaning, driveway and sidewalk washing, deck and fence cleaning, and fleet vehicle washing for local businesses.
+
+Clara: That's a good range. Now, what would you consider an emergency situation for your business? Something that would require an immediate callback?
+
+Shelley: Oh good question. I'd say if a customer has flooding from a blocked drain we were working on, or if there's equipment damage at a client's property. Also if someone's calling because we left a mess or caused accidental damage — that needs to be handled right away.
+
+Clara: Understood. How should our AI agent handle urgent or emergency calls after hours?
+
+Shelley: For anything serious like property damage or a customer complaint about damage we caused, they should try to reach me directly at 403-870-8494. If I don't pick up, they should leave a detailed message and I'll call back within two hours.
+
+Clara: And for regular service inquiries or booking requests outside business hours?
+
+Shelley: Just have them leave their name, number, and what service they're looking for. We'll call back the next business day to book them in.
+
+Clara: Makes sense. Do you use any software for scheduling or customer management?
+
+Shelley: Not really. We keep it simple — just a shared Google Calendar and we track customers in a spreadsheet. Nothing fancy.
+
+Clara: That's fine, we can work around that. Any specific things you want the AI agent to avoid saying or doing?
+
+Shelley: Don't quote prices. Our pricing depends on the job size, surface type, staining — it varies a lot. Also don't promise same-day service. We usually book at least a day or two out.
+
+Clara: Absolutely noted. Anything else you want us to capture?
+
+Shelley: Maybe mention that we're a family business and we take pride in our work. That matters to our customers. And we're fully insured, which people like to know.
+
+Clara: Love that. We'll include that in the agent's personality. Thank you so much Shelley, this has been really helpful.
+
+Shelley: Thank you! Looking forward to seeing how it works.

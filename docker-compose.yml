@@ -1,0 +1,38 @@
+version: "3.8"
+
+# ─────────────────────────────────────────────────────────
+#  Clara Agent Pipeline – n8n Local Docker Setup
+#  Cost: FREE (n8n Community Edition)
+#
+#  Usage:
+#    docker-compose up -d
+#    Open http://localhost:5678
+# ─────────────────────────────────────────────────────────
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: clara_n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=clara2024
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://localhost:5678/
+      - GENERIC_TIMEZONE=Asia/Kolkata
+      # Allow executing shell commands from n8n nodes
+      - N8N_ALLOW_EXEC=true
+    volumes:
+      # n8n persistent data
+      - ./n8n_data:/home/node/.n8n
+      # Mount project so Execute Command nodes can call python scripts
+      - .:/home/node/app
+    working_dir: /home/node/app
+
+volumes:
+  n8n_data:

@@ -1,0 +1,44 @@
+DEMO CALL TRANSCRIPT – Pinnacle HVAC Solutions
+Date: 2026-02-17
+Duration: 5 minutes
+Participants: Sales Rep (Clara), Client Contact (Derek Thompson)
+
+---
+
+Clara: Hi Derek, this is Clara. Thanks for hopping on this call.
+
+Derek: Of course. Derek Thompson, Service Director at Pinnacle HVAC Solutions.
+
+Clara: Great. Tell me about your operating hours.
+
+Derek: We operate Monday through Friday. Official hours are 8:00 to 17:00 Eastern Time. We do have after-hours on-call for emergencies only.
+
+Clara: And your business address?
+
+Derek: 1500 Peachtree Industrial Blvd, Atlanta, Georgia 30309.
+
+Clara: What services do you provide?
+
+Derek: Commercial HVAC installation, maintenance contracts, emergency repair, refrigerant handling, air quality testing, and preventive maintenance.
+
+Clara: What qualifies as an emergency for Pinnacle HVAC?
+
+Derek: A complete system failure in a critical facility like a hospital, data center, or food storage. Also any refrigerant leak that creates safety hazards.
+
+Clara: How should emergency calls be routed?
+
+Derek: Directly to the emergency dispatch team. Their number is 404-555-0220. If no answer, leave urgent voicemail and text notify the on-call lead at 404-555-0231.
+
+Clara: Non-emergency routing?
+
+Derek: Schedule a maintenance call. Collect their facility name, contact name, phone, and the unit details if they know them. Our admin team calls back within one business day.
+
+Clara: Any integrations?
+
+Derek: We don't currently have a CRM. We manage everything in spreadsheets right now, but we're planning to move to ServiceTitan later this year.
+
+Clara: Anything else?
+
+Derek: The agent should be formal. We serve lot of facility managers so professionalism is critical.
+
+Clara: Understood. Thank you Derek!

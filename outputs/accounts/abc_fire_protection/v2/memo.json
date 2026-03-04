@@ -1,0 +1,62 @@
+{
+  "account_id": "abc_fire_protection",
+  "company_name": "ABC Fire Protection",
+  "business_hours": {
+    "days": "Mon-Fri"
+  },
+  "timezone": "Pacific",
+  "office_address": "00 Pacific Standard Time. Is that still correct",
+  "phone_numbers": [
+    " 916-555-0192",
+    " 916-555-0199",
+    " 916-555-0211"
+  ],
+  "services_supported": [
+    "sprinkler",
+    "fire alarm",
+    "extinguisher",
+    "fire extinguisher",
+    "inspection",
+    "maintenance",
+    "testing",
+    "suppression",
+    "repair",
+    "installation",
+    "fire pump"
+  ],
+  "emergency_definition": [
+    "sprinkler leak",
+    "fire alarm",
+    "fire alarm triggered",
+    "fire alarm activation",
+    "water leak",
+    "alarm activation",
+    "fire suppression",
+    "fire suppression failure"
+  ],
+  "emergency_routing_rules": [
+    "our dispatch center",
+    "TRANSCRIPT",
+    "technician at 916",
+    "details",
+    "back within one business day to schedule the appointment",
+    "our answering service at 916",
+    "our team"
+  ],
+  "non_emergency_routing_rules": [
+    "schedule service appointment"
+  ],
+  "call_transfer_rules": {},
+  "integration_constraints": [
+    "ServiceTitan",
+    "CRM",
+    "Slack"
+  ],
+  "after_hours_flow_summary": "",
+  "office_hours_flow_summary": "",
+  "questions_or_unknowns": [],
+  "notes": "",
+  "schema_version": "2.0",
+  "created_at": "2026-03-04T19:29:58.123936+00:00",
+  "last_updated": "2026-03-04T19:30:02.809689+00:00"
+}

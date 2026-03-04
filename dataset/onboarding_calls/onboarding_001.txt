@@ -1,0 +1,47 @@
+ONBOARDING UPDATE TRANSCRIPT – ABC Fire Protection
+Date: 2026-03-01
+Duration: 6 minutes
+Type: Onboarding Confirmation & Updates
+Participants: Onboarding Specialist (Sam), Client Contact (John Mercer)
+
+---
+
+Sam: Hi John, this is Sam from the Clara onboarding team. We're just doing your final configuration review for ABC Fire Protection before we go live. Can I confirm a few things?
+
+John: Sure, sure. Go ahead.
+
+Sam: Great. So we currently have your business hours as Monday through Friday, 8am to 5pm Pacific Standard Time. Is that still correct?
+
+John: Actually, we've recently extended our hours. We're now open 7:30am to 6pm Pacific. Still Monday through Friday.
+
+Sam: Got it, updating that now. We also have your office at 4821 Oak Street, Sacramento. Still current?
+
+John: Yes, that's still correct.
+
+Sam: Good. For emergency definition, we have: sprinkler leak, fire alarm activation, water leak, fire suppression failure. Anything to add?
+
+John: Yes, add fire alarm triggered explicitly, and also include alarm activation as a standalone entry. And I'd also want to add gas line pressure failure — we've started handling those as well.
+
+Sam: Perfect. And your emergency routing is dispatch at 916-555-0192, then on-call technician at 916-555-0199?
+
+John: Yes, but we've added a third fallback now. If both fail, route to our answering service at 916-555-0211. They're available 24/7 and they can page our team.
+
+Sam: Excellent. And we have ServiceTitan as your CRM integration. Is that still accurate?
+
+John: Yes. Actually, one note — we've also started using Slack for internal dispatch notifications. Not sure if that matters but mentioning it.
+
+Sam: We'll note it. Any other changes?
+
+John: Actually yes. We're adding a new service — fire pump testing. Please add that to our services list.
+
+Sam: Done. And any changes to the non-emergency routing?
+
+John: We want callers to now be offered the option to schedule online at our website as well. Tell them to visit abcfireprotection.com/schedule.
+
+Sam: Perfect. Timezone is still PST?
+
+John: Yes, still PST.
+
+Sam: Great John, I think we have everything. You'll see the updated configuration within 24 hours.
+
+John: Sounds good. Thanks Sam.

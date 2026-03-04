@@ -1,0 +1,66 @@
+{
+  "run_timestamp": "2026-03-04T18:38:23.088379+00:00",
+  "processed": 7,
+  "accounts_created": 7,
+  "errors": 0,
+  "missing_business_hours": 0,
+  "missing_emergency_definitions": 5,
+  "details": [
+    {
+      "file": "bens_electric_solutions_demo.txt",
+      "account_id": "bens_electric_solutions_demo",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": true,
+      "error": null
+    },
+    {
+      "file": "demo_transcript_001.txt",
+      "account_id": "account_001",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": false,
+      "error": null
+    },
+    {
+      "file": "demo_transcript_002.txt",
+      "account_id": "account_002",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": true,
+      "error": null
+    },
+    {
+      "file": "demo_transcript_003.txt",
+      "account_id": "account_003",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": true,
+      "error": null
+    },
+    {
+      "file": "demo_transcript_004.txt",
+      "account_id": "account_004",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": false,
+      "error": null
+    },
+    {
+      "file": "demo_transcript_005.txt",
+      "account_id": "account_005",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": true,
+      "error": null
+    },
+    {
+      "file": "gm_pressure_washing_demo.txt",
+      "account_id": "gm_pressure_washing_demo",
+      "status": "ok",
+      "missing_business_hours": false,
+      "missing_emergency_definition": true,
+      "error": null
+    }
+  ]
+}

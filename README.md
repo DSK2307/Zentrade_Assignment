@@ -32,7 +32,7 @@ New-Item -ItemType Directory -Force -Path "outputs\accounts"
 The system processes raw transcripts through a two-phase pipeline using a robust rule-based extraction engine. This ensures deterministic outputs while completely avoiding mandatory paid API dependencies.
 
 ```mermaid
-graph TD
+graph LR
     classDef default fill:#1a1f2e,stroke:#388bfd,stroke-width:2px,color:#cdd9e5,rx:8px,ry:8px
     classDef output fill:#0d2119,stroke:#3fb950,stroke-width:2px,color:#cdd9e5,rx:8px,ry:8px
     classDef input fill:#1c1700,stroke:#d29922,stroke-width:2px,color:#cdd9e5,rx:8px,ry:8px

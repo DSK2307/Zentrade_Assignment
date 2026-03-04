@@ -29,7 +29,7 @@ New-Item -ItemType Directory -Force -Path "outputs\accounts"
 
 ## 🏗 Architecture & Data Flow
 
-The system processes raw transcripts through a two-phase pipeline using a robust rule-based extraction engine with an optional local LLM fallback. This ensures deterministic outputs while completely avoiding mandatory paid API dependencies.
+The system processes raw transcripts through a two-phase pipeline using a robust rule-based extraction engine. This ensures deterministic outputs while completely avoiding mandatory paid API dependencies.
 
 ```mermaid
 graph TD
@@ -42,9 +42,6 @@ graph TD
     
     B -->|Removes fillers, normalizes times| C{Extraction Engine}
     C -->|Regex / Heuristic Rules| D[Account Memo JSON]
-    C -.->|Fallback| LLM[Local Ollama LLM]
-    LLM -.-> D
-    
     D --> E{Patch / Merge Engine}
     
     E -->|Pipeline B Only| F[Field-level diffing]
@@ -69,7 +66,6 @@ graph TD
 ### Prerequisites
 *   Python 3.9+
 *   Node.js (for n8n, optional but recommended)
-*   *Optional:* [Ollama](https://ollama.ai/) running locally with `llama3` for LLM fallback.
 
 ### Environment Setup
 

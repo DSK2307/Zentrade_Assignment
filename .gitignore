@@ -20,3 +20,7 @@ Thumbs.db
 *.swo
 n8n_data/
 *_normalized.txt
+
+# Outputs
+outputs/accounts/
+outputs/summary_report.json

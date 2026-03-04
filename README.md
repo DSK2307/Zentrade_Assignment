@@ -2,6 +2,12 @@
 
 A zero-cost, locally reproducible automation pipeline that converts customer call transcripts into structured Retell AI voice agent configurations. Built for the Clara Answers intern assignment.
 
+## 🎥 Watch the Demo
+
+[![Clara Agent Pipeline Demo](https://img.youtube.com/vi/UIsep4a4iHo/maxresdefault.jpg)](https://www.youtube.com/watch?v=UIsep4a4iHo)
+
+*Click the image above to watch the 4-minute full video walkthrough, demonstrating the CLI pipeline, n8n orchestration, and the Streamlit UI dashboard.*
+
 ## 🏗 Architecture & Data Flow
 
 The system processes raw transcripts through a two-phase pipeline using a robust rule-based extraction engine with an optional local LLM fallback. This ensures deterministic outputs while completely avoiding mandatory paid API dependencies.

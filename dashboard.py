@@ -274,41 +274,50 @@ if tab_choice == "📊 Dashboard":
     else:
         for a in accounts:
             with st.expander(f"🏢 {a['company']}  |  `{a['id']}`", expanded=False):
-                col_a, col_b = st.columns(2)
-                with col_a:
-                    st.markdown("**v1 Memo**")
+                tab_v1, tab_v2 = st.tabs(["📋 v1 Configuration", "✨ v2 Onboarded"])
+                
+                with tab_v1:
                     if a["v1_memo"]:
                         m = a["v1_memo"]
-                        st.write(f"🕐 Hours: `{json.dumps(m.get('business_hours', 'N/A'))}`")
-                        st.write(f"🌐 Timezone: `{m.get('timezone', '—')}`")
-                        st.write(f"📍 Address: `{m.get('office_address', '—')}`")
-                        svcs = m.get("services_supported", [])
-                        st.write(f"🔧 Services: {', '.join(svcs) if svcs else '—'}")
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.write(f"**🕐 Hours:** `{json.dumps(m.get('business_hours', 'N/A'))}`")
+                            st.write(f"**🌐 Timezone:** `{m.get('timezone', '—')}`")
+                            st.write(f"**📍 Address:** `{m.get('office_address', '—')}`")
+                        with col2:
+                            svcs = m.get("services_supported", [])
+                            st.write("**🔧 Services:**")
+                            for s in svcs:
+                                st.caption(f" • {s}")
+                                
                         qs = m.get("questions_or_unknowns", [])
                         if qs:
-                            st.warning(f"⚠️ Open questions: {len(qs)}")
+                            st.warning(f"⚠️ **Open questions ({len(qs)}):**")
                             for q in qs:
                                 st.caption(f"  • {q}")
+                                
+                        st.markdown("---")
+                        st.caption("Raw JSON Data")
+                        st.json(m, expanded=False)
                     else:
                         st.info("No v1 memo found.")
-                with col_b:
-                    st.markdown("**v2 Memo**")
+                        
+                with tab_v2:
                     if a["v2_memo"]:
                         m2 = a["v2_memo"]
-                        st.write(f"🕐 Hours: `{json.dumps(m2.get('business_hours', 'N/A'))}`")
-                        st.write(f"📅 Updated: `{m2.get('last_updated', '—')[:10]}`")
-                        st.write(f"📌 Schema: `v{m2.get('schema_version', '?')}`")
+                        st.success(f"✅ Onboarding Complete (Schema v{m2.get('schema_version', '?')})")
+                        st.write(f"**🕐 Updated Hours:** `{json.dumps(m2.get('business_hours', 'N/A'))}`")
+                        st.write(f"**📅 Last Updated:** `{m2.get('last_updated', '—')[:10]}`")
+                        
                         changelog = ACCOUNTS_DIR / a["id"] / "v2" / "changes.md"
                         if changelog.exists():
-                            st.success("✅ Changelog available")
+                            st.download_button("⬇️ Download changes.md", data=changelog.read_text('utf-8'), file_name="changes.md")
+                            
+                        st.markdown("---")
+                        st.caption("Raw JSON Data")
+                        st.json(m2, expanded=False)
                     else:
-                        st.info("No v2 memo yet. Run Pipeline B.")
-
-                # Raw JSON toggle
-                if st.checkbox(f"Show raw JSON – {a['id']}", key=f"raw_{a['id']}"):
-                    st.markdown('<div class="json-box">' +
-                                json.dumps(a["v1_memo"], indent=2) +
-                                '</div>', unsafe_allow_html=True)
+                        st.info("No v2 memo yet. Run Pipeline B to patch.")
 
 # ═════════════════════════════════════════════════════════════════════════════
 #  TAB 2 – DIFF VIEWER
@@ -334,6 +343,11 @@ elif tab_choice == "🔍 Diff Viewer":
         modified = [d for d in diff if d["status"] == "modified"]
         removed  = [d for d in diff if d["status"] == "removed"]
         same     = [d for d in diff if d["status"] == "same"]
+
+        total_fields = len(diff)
+        change_pct = ((len(added) + len(modified) + len(removed)) / total_fields) * 100 if total_fields else 0
+        
+        st.progress(int(change_pct), text=f"Update Intensity: {change_pct:.1f}% of fields changed during Onboarding")
 
         s1, s2, s3, s4 = st.columns(4)
         s1.metric("✅ Added",    len(added))
@@ -447,6 +461,8 @@ elif tab_choice == "⚡ Batch Processor":
 
                 progress.progress(100, text="Done!")
                 status_box.success("✅ Batch complete!")
+                st.balloons()
+                st.toast("🎉 Pipeline A Batch Finished!", icon="✅")
 
                 log_text = "\n".join(log_lines)
                 st.markdown('<div class="log-box">' + log_text.replace("\n", "<br>") + '</div>',
@@ -519,6 +535,8 @@ elif tab_choice == "⚡ Batch Processor":
 
                     progress_b.progress(100, text="Done!")
                     st.success(f"✅ Pipeline B complete for `{sel_acct}`")
+                    st.balloons()
+                    st.toast(f"🎉 Successfully Onboarded {sel_acct}!", icon="🚀")
 
                     log_html = "<br>".join(
                         line for block in all_logs for line in block.split("\n")

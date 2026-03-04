@@ -138,21 +138,5 @@ outputs/
 
 ---
 
-## ⚠️ Known Limitations
 
-*   **Extraction Rigidity:** The rule-based regex extraction is tuned for specific conversational patterns (e.g., standard business hour formats). Highly unstructured or colloquial phrasing may fail rule-checks and fall back to the `questions_or_unknowns` unmapped list.
-*   **Idempotency Overwrites:** While the CLI supports `--force` for overwrites, running without it simply skips existing directories. Advanced state-locking is not implemented.
-*   **English-Only:** Extraction rules currently assume English-language transcripts.
-*   **No Audio Processing:** Expects pre-transcribed text. Diarization errors in the source text can degrade extraction accuracy.
 
----
-
-## 🚀 Improvements Given Production Access
-
-If provided with production resources (Cloud infrastructure, paid APIs, DB access), I would implement the following architectural upgrades:
-
-1.  **State-of-the-Art LLM Extraction:** Replace regex rules with structured JSON-mode output from a frontier model (GPT-4o or Claude 3.5 Sonnet) combined with `instructor` or `pydantic` for guaranteed schema validation.
-2.  **Audio Ingestion:** Integrate a live Whisper API (e.g., Deepgram) to accept raw `.mp3`/`.wav` call recordings and perform speaker diarization on the fly.
-3.  **Cloud Native Orchestration & Storage:** Move from the local filesystem and n8n to AWS Step Functions or Temporal.io, persisting outputs to Amazon S3 and caching active memo states in PostgreSQL/DynamoDB.
-4.  **Retell API Integration:** Automate the final mile by using the `agent_spec.json` to programmatically provision/update the agent directly via the Retell REST API instead of a manual UI import.
-5.  **Human-in-the-Loop (HITL) UI:** Enhance the Streamlit dashboard to allow operations teams to manually approve, edit, or append to `questions_or_unknowns` before finalizing the `agent_spec.json`.

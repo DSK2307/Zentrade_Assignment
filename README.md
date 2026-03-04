@@ -8,6 +8,23 @@ A zero-cost, locally reproducible automation pipeline that converts customer cal
 
 *Click the image above to watch the 4-minute full video walkthrough, demonstrating the CLI pipeline, n8n orchestration, and the Streamlit UI dashboard.*
 
+---
+
+## 📂 Dataset Injection
+
+To process your own calls:
+1.  Drop raw `.txt` transcript files into `dataset/demo_calls/` (for Pipeline A) or `dataset/onboarding_calls/` (for Pipeline B).
+2.  Run the batch processor or trigger the pipeline via CLI/n8n pointing to your new file paths. The system will automatically generate safe `account_id` slugs based on extracted company names.
+
+### Cleaning Outputs (Reset for New Data)
+If you want to clear all previously generated memos, agent specs, and changelogs to start fresh with a new dataset, you can run the following PowerShell commands:
+```powershell
+# Clears all generated account folders and the batch summary report
+Remove-Item -Recurse -Force outputs\accounts
+Remove-Item -Force outputs\summary_report.json
+New-Item -ItemType Directory -Force -Path "outputs\accounts"
+```
+
 ## 🏗 Architecture & Data Flow
 
 The system processes raw transcripts through a two-phase pipeline using a robust rule-based extraction engine with an optional local LLM fallback. This ensures deterministic outputs while completely avoiding mandatory paid API dependencies.
@@ -113,23 +130,6 @@ The repository includes a pre-configured n8n workflow (`workflows/n8n_workflow.j
     *   Open `http://localhost:5678`.
     *   Click **Add Workflow** -> **Import from File** and select `workflows/n8n_workflow.json`.
     *   Click **Execute Workflow** on either the Pipeline A or Pipeline B manual trigger node.
-
----
-
-## 📂 Dataset Injection
-
-To process your own calls:
-1.  Drop raw `.txt` transcript files into `dataset/demo_calls/` (for Pipeline A) or `dataset/onboarding_calls/` (for Pipeline B).
-2.  Run the batch processor or trigger the pipeline via CLI/n8n pointing to your new file paths. The system will automatically generate safe `account_id` slugs based on extracted company names.
-
-### Cleaning Outputs (Reset for New Data)
-If you want to clear all previously generated memos, agent specs, and changelogs to start fresh with a new dataset, you can run the following PowerShell commands:
-```powershell
-# Clears all generated account folders and the batch summary report
-Remove-Item -Recurse -Force outputs\accounts
-Remove-Item -Force outputs\summary_report.json
-New-Item -ItemType Directory -Force -Path "outputs\accounts"
-```
 
 ---
 

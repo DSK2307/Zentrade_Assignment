@@ -135,6 +135,7 @@ outputs/
 ### 1️⃣ Prerequisites
 - **Python 3.9+**
 - **Node.js** (optional, required only for n8n integration)
+- **Plotly** (auto-installed via `requirements.txt` — powers the interactive charts)
 
 ### 2️⃣ Environment Setup
 Clone the repository and set up a standard Python virtual environment.
@@ -186,11 +187,19 @@ python scripts/batch_process.py --dataset_dir dataset/demo_calls --output_dir ou
 
 </details>
 
-<details>
-<summary><b>Option B: Streamlit Dashboard</b></summary>
+<details open>
+<summary><b>Option B: Streamlit Dashboard (Enhanced UI)</b></summary>
 
-A visual UI for monitoring pipeline runs, inspecting generated JSONs, and viewing color-coded diffs.
+A professional SaaS-style visual UI featuring:
+- 📊 **Interactive Plotly charts** — pipeline completion bar chart & v1 vs v2 donut chart
+- 💳 **KPI metric cards** with gradient accents and hover effects
+- 🔍 **Diff Viewer** with compact/detailed toggle and colour-coded field highlights
+- 📜 **Live Logs tab** — searchable, filterable table view of `logs/pipeline.log`
+- ⚡ **Step indicator** in Pipeline B showing Normalize → Patch → Generate → Changelog progress
+- 🔎 **Account search & filter** (v1 Only / v2 Onboarded)
+
 ```bash
+pip install -r requirements.txt   # installs streamlit + plotly
 streamlit run dashboard.py
 ```
 > *Open `http://localhost:8501` in your browser.*
